@@ -15,7 +15,7 @@ List available commands with
   
 Get help with a command with
 
-  ./commander.py help <command-name>
+  ./commander.py help COMMAND
 
 See settings with
 

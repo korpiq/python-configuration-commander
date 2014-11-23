@@ -6,6 +6,21 @@ Configurable command runner implementation in Python.
 This is a template or framework for implementing python programs that take their configuration
 from different sources and execute independent commands specified on command line.
 
+Help
+----
+
+List available commands with
+
+  ./commander.py
+  
+Get help with a command with
+
+  ./commander.py help <command-name>
+
+See settings with
+
+  ./commander.py settings
+
 Structure
 ---------
 
@@ -32,3 +47,10 @@ Optionally each command class may define the following:
  * options: map of option names to { handler: method, purpose: string }
  * run(): run after all options have been handled
  * help(): executed to produce help text for that command.
+
+Tests
+-----
+
+Run tests with command
+
+  python test/smoke.py

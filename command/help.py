@@ -21,5 +21,9 @@ class Help(Command):
                 print(command.help())
         else:
             print('Available commands:')
-            for command in prepare_commands(list_commands(), self.settings):
-                print('  ' + command.usage())
+            for command_name in list_commands():
+                command = prepare_commands([command_name], self.settings)[0]
+                try:
+                    print('  ' + command.usage())
+                except NotImplementedError as e:
+                    print(e)
